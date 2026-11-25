@@ -1,0 +1,4 @@
+# Fixtures are compared byte-for-byte (encoding tests), so never let git rewrite line endings.
+tests/fixtures/* -text
+# Shell scripts must keep LF endings, or bash fails on Windows checkouts.
+*.sh text eol=lf

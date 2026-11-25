@@ -1,0 +1,94 @@
+# PLACEHOLDERS. Replace after Phase 0 with real headers.
+#
+# One block per source. Each maps an internal column name to a list of possible source
+# headers. Matching ignores case, leading/trailing spaces, repeated spaces, underscores and
+# hyphens, so "Item Code", " ITEM_CODE " and "item-code" are the same header.
+#
+# Two kinds of header live here:
+#   * REAL (seen in an actual export, meaning not yet confirmed by the pharmacy): the OmniCell
+#     stock listing headers (ARTIKELCODE, NAME, ...), read from BestandArtikel*.csv.
+#   * GUESS (made up for the synthetic fixtures): everything else.
+# Optional internal columns (see schema.py) may be left out.
+
+# Both robots are assumed to export the same format (OPEN_QUESTIONS.md, Q3).
+#
+# Real stock listing, one row per ARTIKELCODE (barcode level), so one drug can span several rows:
+#   ARTIKELCODE  article / barcode code (text: keep leading zeros)
+#   NAME         full product name incl. strength and form  (NAME1 is a 50-character copy: ignored)
+#   STRENGTH     blank in every row seen, so strength is parsed from NAME
+#   PACKSIZE     units per pack
+#   ISTANZAHL    count on hand (FREIANZAHL, the "free" count, was identical on every row seen)
+# Deliberately NOT mapped:
+#   SERIALNUMBERSINCEEXPIRYDATE  only placeholder dates (01.01.80, 13.10.73): not an expiry date
+#   FORM                         "Tab", "Cap"... is the dosage form, not the unit the count is in
+#   MINMENGE / MAXMENGE          -1 on every row (not set)
+#   every column ending in 1 or 2 is a copy of the column without the digit
+# Second real format (Nov Stock DB.csv, OmniCell export of 2026-11-03, Lowood): ';' delimiter,
+# 21 columns: Name, Form, Size (=PACKSIZE), Itemcode (=ARTIKELCODE), # (=ISTANZAHL, boxes),
+# Free#, ... FOS (unconfirmed, maybe a usage rate: not mapped).
+omnicell_robot_1:
+  item_code: ["ARTIKELCODE", "Itemcode", "Item Code", "Item ID"]
+  item_name: ["NAME", "Name", "Item Description", "Description"]
+  strength: ["STRENGTH", "Strength"]
+  pack_size: ["PACKSIZE", "Size", "Pack Size"]
+  unit: ["Unit"]
+  stock_qty: ["ISTANZAHL", "#", "Qty On Hand", "Quantity On Hand"]
+  expiry_date: ["Expiry Date"]
+
+omnicell_robot_2:
+  item_code: ["ARTIKELCODE", "Itemcode", "ITEM_CODE", "Item Code"]
+  item_name: ["NAME", "Name", "Drug Name", "Item Name", "Item Description"]
+  strength: ["STRENGTH", "Strength"]
+  pack_size: ["PACKSIZE", "Size", "Pack", "Pack Size"]
+  unit: ["UoM", "Unit of Measure", "Unit"]
+  stock_qty: ["ISTANZAHL", "#", "Stock Level", "Current Stock", "Qty On Hand"]
+  expiry_date: ["Expiry", "Expiry Date"]
+
+pmr:
+  item_code: ["Product Code"]
+  # REAL Lowood PMR formats (both are "Script ..." reports):
+  #   pmr_test.csv: Dispensed Date (day and time), EPES ID, Generic Name, Script Dispensed As.
+  #     No quantity, so each row counts as one dispensing line.
+  #   Script Report Generator*.csv: a grouped report (Patient No., Script Dispensed As, Script
+  #     Written As, Directions, then a line with Disp Month and Disp Qty). The month has no day.
+  #     Patient No. and Directions are never mapped.
+  # Third real format: the full PMR "script" table (Lowood, 2026-11, one row per dispensed line,
+  # CamelCase headers: ScriptDispensedAs, DateDispensed, Quantity, PackSize, ScanDrugSnomedUnit,
+  # MarkedForDeletion, NotDispensed). Quantity equals the scanned unit count on ~90% of rows.
+  # Deliberately NOT mapped: ScanDrugDmadCode / ScanSnomedQuantity (17-digit codes, corrupted
+  # when saved through Excel), StockID / GMSStockNumber (PMR-internal, not the robot's code).
+  item_name: ["Product Name", "Product Description", "Script Dispensed As", "ScriptDispensedAs"]
+  generic_name: ["Generic Name"]
+  pack_size: ["Pack Size", "PackSize"]
+  unit: ["Unit", "ScanDrugSnomedUnit"]
+  dispensed_qty: ["Qty Dispensed", "Quantity Dispensed", "Disp Qty", "Quantity"]
+  dispense_date: ["Date Dispensed", "Dispense Date", "Dispensed Date", "Disp Month (Disp)",
+                  "DateDispensed"]
+  branch: ["Branch", "Site"]
+  marked_deleted: ["MarkedForDeletion", "Marked For Deletion", "Deleted"]
+  not_dispensed: ["NotDispensed", "Not Dispensed"]
+
+# Robot activity statistics (REAL headers, from "Activity statistics*.csv" and _2026*.csv).
+# One row per day per system, dates written dd.mm.yy, counts only: no item column, so it cannot
+# feed the stock audit. Column order varies between files; names do not.
+omnicell_activity:
+  activity_date: ["DATE"]
+  period_hours: ["PERIOD(H)"]
+  system_name: ["SYSTEMNAME"]
+  dispensed: ["DISPENSED"]
+  stocked: ["STOCKED"]
+  rearranged: ["REARRANGED"]
+
+# Per-pharmacy headers, tried BEFORE the shared blocks above. Each pharmacy tab in the app
+# reads its own files, so a pharmacy whose exports use different headers lists them here:
+#
+#   pharmacies:
+#     mcgregor:
+#       pmr:
+#         item_name: ["Their product column"]
+#         dispensed_qty: ["Their quantity column"]
+#
+# Lowood's files are covered by the shared blocks. McGregor: NO FILE SEEN YET (placeholder).
+pharmacies:
+  lowood: {}
+  mcgregor: {}

@@ -1,0 +1,52 @@
+product_code,product_name,pack_size,unit,qty_dispensed,date_dispensed,branch,Patient ID
+PMR-00156,Amlodipine 5 mg Tablets,28,Tablet,9,20/09/2026,Branch B,PT-FAKE-56505
+PMR-00135,Omeprazole 20mg Gastro-resistant Caps,28,Capsule,83,21/09/2026,Branch A,PT-FAKE-63172
+PMR-00170,Morphine Sulfate 10mg/5ml Oral Solution 100ml,1,Bottle,1,21/09/2026,Branch B,PT-FAKE-16148
+PMR-00114,Amox 500mg Caps,21,Capsule,95,23/09/2026,Branch A,PT-FAKE-95627
+PMR-00149,Ibuprofen 400mg Tablets,24,Tablet,21,23/09/2026,Branch B,PT-FAKE-39007
+PMR-00128,Atorvastatin 20mg Tabs,28,Tablet,40,24/09/2026,Branch A,PT-FAKE-81419
+PMR-00170,Morphine Sulfate 10mg/5ml Oral Solution 100ml,1,Bottle,2,25/09/2026,Branch B,PT-FAKE-88461
+PMR-00135,Omeprazole 20mg Gastro-resistant Caps,28,Capsule,33,26/09/2026,Branch A,PT-FAKE-71317
+PMR-00156,Amlodipine 5 mg Tablets,28,Tablet,6,26/09/2026,Branch B,PT-FAKE-44513
+PMR-00177,Ceftriaxone Sodium 1g Powder for Injection,1,Vial,104,26/09/2026,Branch B,PT-FAKE-27004
+PMR-00121,Metformin Hydrochloride 500 mg Tablets,56,Tablet,18,27/09/2026,Branch A,PT-FAKE-79943
+PMR-00128,Atorvastatin 20mg Tabs,28,Tablet,53,27/09/2026,Branch A,PT-FAKE-44895
+PMR-00121,Metformin Hydrochloride 500 mg Tablets,56,Tablet,17,28/09/2026,Branch A,PT-FAKE-49837
+PMR-00142,Levothyroxine 0.1mg Tablets,28,Tablet,51,28/09/2026,Branch A,PT-FAKE-31175
+PMR-00163,Furosemide 40mg Tabs,28,Tablet,43,28/09/2026,Branch B,PT-FAKE-32962
+PMR-00107,Paracetamol 0.5g Tabs,32,Tablet,18,30/09/2026,Branch A,PT-FAKE-12839
+PMR-00114,Amox 500mg Caps,21,Capsule,26,30/09/2026,Branch A,PT-FAKE-91567
+PMR-00142,Levothyroxine 0.1mg Tablets,28,Tablet,4,01/10/2026,Branch A,PT-FAKE-80170
+PMR-00184,Prednisolone 5mg Tablets,28,Tablet,331,01/10/2026,Branch B,PT-FAKE-63421
+PMR-00107,Paracetamol 0.5g Tabs,32,Tablet,50,02/10/2026,Branch A,PT-FAKE-48203
+PMR-00128,Atorvastatin 20mg Tabs,28,Tablet,2,02/10/2026,Branch A,PT-FAKE-93883
+PMR-00170,Morphine Sulfate 10mg/5ml Oral Solution 100ml,1,Bottle,2,03/10/2026,Branch B,PT-FAKE-03579
+PMR-00121,Metformin Hydrochloride 500 mg Tablets,56,Tablet,158,04/10/2026,Branch A,PT-FAKE-33150
+PMR-00149,Ibuprofen 400mg Tablets,24,Tablet,37,04/10/2026,Branch B,PT-FAKE-21950
+PMR-00114,Amox 500mg Caps,21,Capsule,116,05/10/2026,Branch A,PT-FAKE-33476
+PMR-00121,Metformin Hydrochloride 500 mg Tablets,56,Tablet,11,06/10/2026,Branch A,PT-FAKE-97871
+PMR-00156,Amlodipine 5 mg Tablets,28,Tablet,61,06/10/2026,Branch B,PT-FAKE-40841
+PMR-00135,Omeprazole 20mg Gastro-resistant Caps,28,Capsule,7,09/10/2026,Branch A,PT-FAKE-54866
+PMR-00156,Amlodipine 5 mg Tablets,28,Tablet,28,09/10/2026,Branch B,PT-FAKE-02580
+PMR-00170,Morphine Sulfate 10mg/5ml Oral Solution 100ml,1,Bottle,1,10/10/2026,Branch B,PT-FAKE-90693
+PMR-00128,Atorvastatin 20mg Tabs,28,Tablet,100,11/10/2026,Branch A,PT-FAKE-72071
+PMR-00135,Omeprazole 20mg Gastro-resistant Caps,28,Capsule,36,12/10/2026,Branch A,PT-FAKE-79252
+PMR-00107,Paracetamol 0.5g Tabs,32,Tablet,196,13/10/2026,Branch A,PT-FAKE-81358
+PMR-00156,Amlodipine 5 mg Tablets,28,Tablet,1,14/10/2026,Branch B,PT-FAKE-26019
+PMR-00121,Metformin Hydrochloride 500 mg Tablets,56,Tablet,132,15/10/2026,Branch A,PT-FAKE-06285
+PMR-00149,Ibuprofen 400mg Tablets,24,Tablet,81,15/10/2026,Branch B,PT-FAKE-35732
+PMR-00163,Furosemide 40mg Tabs,28,Tablet,40,16/10/2026,Branch B,PT-FAKE-21009
+PMR-00170,Morphine Sulfate 10mg/5ml Oral Solution 100ml,1,Bottle,1,16/10/2026,Branch B,PT-FAKE-36553
+PMR-00149,Ibuprofen 400mg Tablets,24,Tablet,69,18/10/2026,Branch B,PT-FAKE-48511
+PMR-00107,Paracetamol 0.5g Tabs,32,Tablet,241,19/10/2026,Branch A,PT-FAKE-04963
+PMR-00114,Amox 500mg Caps,21,Capsule,7,19/10/2026,Branch A,PT-FAKE-13987
+PMR-00121,Metformin Hydrochloride 500 mg Tablets,56,Tablet,194,19/10/2026,Branch A,PT-FAKE-42422
+PMR-00128,Atorvastatin 20mg Tabs,28,Tablet,94,19/10/2026,Branch A,PT-FAKE-23453
+PMR-00135,Omeprazole 20mg Gastro-resistant Caps,28,Capsule,58,19/10/2026,Branch A,PT-FAKE-43420
+PMR-00142,Levothyroxine 0.1mg Tablets,28,Tablet,25,19/10/2026,Branch A,PT-FAKE-84595
+PMR-00149,Ibuprofen 400mg Tablets,24,Tablet,175,19/10/2026,Branch B,PT-FAKE-62337
+PMR-00156,Amlodipine 5 mg Tablets,28,Tablet,12,19/10/2026,Branch B,PT-FAKE-92305
+PMR-00163,Furosemide 40mg Tabs,28,Tablet,33,19/10/2026,Branch B,PT-FAKE-71703
+PMR-00170,Morphine Sulfate 10mg/5ml Oral Solution 100ml,1,Bottle,5,19/10/2026,Branch B,PT-FAKE-77942
+PMR-00177,Ceftriaxone Sodium 1g Powder for Injection,1,Vial,5,19/10/2026,Branch B,PT-FAKE-88872
+PMR-00184,Prednisolone 5mg Tablets,28,Tablet,24,19/10/2026,Branch B,PT-FAKE-39606

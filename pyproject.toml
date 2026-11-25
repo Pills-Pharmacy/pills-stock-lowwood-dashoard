@@ -1,0 +1,20 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "--cov=. --cov-fail-under=80"
+
+[tool.coverage.run]
+omit = [".venv/*", "tests/*"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+ignore = ["ISC004"]  # implicit string concatenation inside lists is used for long text
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "config", "schema", "load", "clean", "match", "analyse", "activity", "usage", "export", "pipeline", "app",
+    "make_fixtures", "frames",
+]

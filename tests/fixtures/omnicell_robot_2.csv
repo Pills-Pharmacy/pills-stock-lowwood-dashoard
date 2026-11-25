@@ -1,0 +1,7 @@
+ITEM_CODE,Drug Name,strength,Pack,Stock Level,UoM
+FAKE-0007,IBUPROFEN 400MG TABS,0.4g,84,840,Tablet
+FAKE-0008,Amlodipine 5mg Tabs,5mg,28,3000,Tablet
+FAKE-0009,Furosemide 40mg Tabs,40mg,28,168,Tablet
+FAKE-0010,Morphine Sulf 10mg/5ml Oral Soln,10mg/5ml,100,6,Bottle
+FAKE-0011,Ceftriaxone 1g Inj,1g,1,20,Vial
+FAKE-0012,Prednisolone 5mg Tabs,5mg,28,560,Tablet

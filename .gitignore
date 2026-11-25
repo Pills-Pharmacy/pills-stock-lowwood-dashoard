@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.csv
+!tests/fixtures/*.csv
+!reference/robot_catalogue.csv
+*.xlsx
+outputs/
+confirmed_matches.csv
+confirmed_matches_*.csv
